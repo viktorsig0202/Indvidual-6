@@ -49,7 +49,13 @@ class TestUserStories(unittest.TestCase):
         Example:
         >>> Reccomendation(["hiking"]) = "hiking_activity"
         assertEqual("hiking","hiking activity")
+
+        Returns:
+        - Activity: a string that system reccomends the user tries
         """
+        interests = ["climbing"]
+        result = Functions(interests)
+        self.assertEqual(interests, result)
 
 
 if __name__ == "__main__":
