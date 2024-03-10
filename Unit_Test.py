@@ -2,7 +2,6 @@ import unittest
 import Functions
 
 
-# all the tests fail because the functions are not implemented!!!
 class TestUserStories(unittest.TestCase):
 
     def test_User_Sign_up(self):
@@ -77,3 +76,4 @@ class TestUserStories(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    # all the tests fail because the functions are not implemented! (not a part of this assignment)
