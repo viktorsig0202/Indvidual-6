@@ -41,7 +41,9 @@ class TestUserStories(unittest.TestCase):
         self.assertIsNotNone(monthly_events)
 
     def test_Reccomendation(self):
-        """Test case for Reccomendation funciton.
+        """
+        Test case for Reccomendation funciton.
+
         This test checks if the Reccomendation align with the users preferences.
 
         Input: - user_interests: A list containing the user_interests
@@ -56,6 +58,9 @@ class TestUserStories(unittest.TestCase):
         interests = ["climbing"]
         result = Functions(interests)
         self.assertEqual(interests, result)
+
+    def test_Comment_On_Activity():
+        """"""
 
 
 if __name__ == "__main__":
