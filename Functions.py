@@ -1,9 +1,14 @@
-
 def User_Sign_Up():
     pass
+
+
 def Monthly_Calander():
     pass
-def Reccomendations(intrests:list):
+
+
+def Reccomendations(intrests: list):
     pass
-def Comment_On_Activity():
+
+
+def Comment_On_Activity(comment: str):
     pass
