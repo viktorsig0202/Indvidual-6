@@ -12,6 +12,11 @@ class Bank:
         self.accounts.append(account)
 
     def total_balance(self):
+        """Gives us the balance of all accounts
+
+        Returns:
+        float: Account balance
+        """
         total = 0
         for account in self.accounts:
             total += account.balance
