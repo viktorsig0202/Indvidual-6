@@ -19,7 +19,9 @@ class TestUserStories(unittest.TestCase):
         Bool: True if the signup procces is successful and False if it fails
         """
         is_signed_in = Functions.User_Sign_Up()
+        is_signed_in2 = Functions.User_Sign_Up("John05", "password123")
         self.assertTrue(is_signed_in)
+        self.assertTrue(is_signed_in2)
 
     def test_Montly_Calander(self):
         """
