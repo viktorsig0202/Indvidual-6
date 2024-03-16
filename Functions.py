@@ -67,5 +67,17 @@ def Reccomendations(user_interest):
         return "No reccomendations (try again!)"
 
 
-def Comment_On_Activity(comment: str):
-    pass
+def Comment_On_Activity(comment):
+    """
+    Function to post a comment on an activity.
+
+    Args:
+    comment(str): The comment the user wants to post on the activity.
+
+    Returns:
+    str: the comment the users posts or None if no comment
+    """
+    if comment:
+        return f"commented on post {comment}"
+    else:
+        return None

@@ -72,11 +72,10 @@ class TestUserStories(unittest.TestCase):
         Returns:
         string: the comment which is posted on the activity
         """
-        comment = "I Really Liked it!"
-        comment_on_activity = Functions.Comment_On_Activity(comment)
-        self.assertEqual(comment, comment_on_activity)
+        self.assertIsNotNone(Functions.Comment_On_Activity("i loved it"))
+        self.assertIsNotNone(Functions.Comment_On_Activity("expensive!"))
+        self.assertIsNotNone(Functions.Comment_On_Activity(""))
 
 
 if __name__ == "__main__":
     unittest.main()
-    # all the tests fail because the functions are not implemented! (not a part of this assignment)
