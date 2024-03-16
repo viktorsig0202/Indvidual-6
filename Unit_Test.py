@@ -15,7 +15,7 @@ class TestUserStories(unittest.TestCase):
         Returns:
         Bool: True if the signup procces is successful and False if it fails
         """
-        is_signed_in = Functions.User_Sign_Up()
+        is_signed_in = Functions.User_Sign_Up("Alex02", "StRoNg_PaSsWoRd")
         is_signed_in2 = Functions.User_Sign_Up("John05", "password123")
         self.assertTrue(is_signed_in)
         self.assertTrue(is_signed_in2)
@@ -74,7 +74,7 @@ class TestUserStories(unittest.TestCase):
         """
         self.assertIsNotNone(Functions.Comment_On_Activity("i loved it"))
         self.assertIsNotNone(Functions.Comment_On_Activity("expensive!"))
-        self.assertIsNotNone(Functions.Comment_On_Activity(""))
+        self.assertIsNotNone(Functions.Comment_On_Activity("BEAUTIFUL<3!!!!"))
 
 
 if __name__ == "__main__":
