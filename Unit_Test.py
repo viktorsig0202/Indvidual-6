@@ -59,7 +59,7 @@ class TestUserStories(unittest.TestCase):
 
     def test_Comment_On_Activity(self):
         """
-        Test case for Comment_On_Activity funciton.
+        Test case for Comment_On_Activity function.
         this checks if the comment matched the comment on the activity
 
         Args:
@@ -67,7 +67,7 @@ class TestUserStories(unittest.TestCase):
 
         Example:
         >>> comment = "string" -> Result = Comment_On_Activity(comment)
-        assertEqual(comment,Result)
+        assertisNotNone(Result)
 
         Returns:
         string: the comment which is posted on the activity
