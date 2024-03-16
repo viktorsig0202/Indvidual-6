@@ -9,9 +9,6 @@ class TestUserStories(unittest.TestCase):
         Test case for the User_Sign_Up function.
         This test checks if the user sign up process was a success or a fail.
 
-        Args:
-        None
-
         Example:
         >>> assertTrue(result)
 
@@ -29,9 +26,6 @@ class TestUserStories(unittest.TestCase):
         This test checks if the montly Calander is not None.
         if it is None, the function failed.
 
-        Args:
-        None
-
         Example:
         >>> assertIsNotNone(Montly_events)
 
@@ -47,18 +41,21 @@ class TestUserStories(unittest.TestCase):
         This test checks if the Reccomendation align with the users preferences.
 
         Args:
-        user_interests(List): A list containing the user_interests
+        user_interest(str): one of the user's interests
 
         Example:
-        >>> Reccomendation(["hiking"]) = "hiking_activity"
-        assertEqual("hiking","hiking activity")
+        >>> Reccomendation("hiking") = "hiking_activity"
+        assertTrue("hiking" in "hiking activity")
 
         Returns:
-        String: a activity in the form of a string that the system reccomends to the user
+        Str: an activity that the system reccomends to the user
         """
-        interests = ["climbing"]
-        result = Functions(interests)
-        self.assertEqual(interests, result)
+        interest1 = "hiking"
+        interest2 = "river rafting"
+        result1 = Functions.Reccomendations(interest1)
+        result2 = Functions.Reccomendations(interest2)
+        self.assertTrue(interest1 in result1)
+        self.assertTrue(interest2 in result2)
 
     def test_Comment_On_Activity(self):
         """
@@ -73,7 +70,7 @@ class TestUserStories(unittest.TestCase):
         assertEqual(comment,Result)
 
         Returns:
-        string: the comment in the form of a string which is posted on the activity
+        string: the comment which is posted on the activity
         """
         comment = "I Really Liked it!"
         comment_on_activity = Functions.Comment_On_Activity(comment)

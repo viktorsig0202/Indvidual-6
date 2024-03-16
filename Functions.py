@@ -4,7 +4,7 @@ def User_Sign_Up(username="", password=""):
 
     Args:
     username(str): name object
-    password(wtr): password object
+    password(str): password object
 
     Returns:
     bool: True if the sign-up process is successful, False otherwise.
@@ -39,19 +39,33 @@ def Monthly_Calander():
         "December": ["Dog sledding", "Ice cave tour"],
     }
     current_date = datetime.datetime.now()
-
     current_month = current_date.strftime("%B")
 
     return schedule[current_month]
 
 
-def Reccomendations(intrests: list):
-    pass
+def Reccomendations(user_interest):
+    """
+    Function to generate Reccomended activities based on user interests.
+
+    Args:
+    user_interest(str): one of the user intrests
+
+    Returns:
+    str: the activity the system reccomends
+    """
+    if user_interest:
+        if user_interest == "hiking":
+            return "Sign up to hiking in hvammsdalur"
+        elif user_interest == "river rafting":
+            return "attend river rafting at Siglufjörður"
+        elif user_interest == "kayaking":
+            return "attend kayaking at jökulsárlón"
+        else:
+            return "Try something new"
+    else:
+        return "No reccomendations (try again!)"
 
 
 def Comment_On_Activity(comment: str):
     pass
-
-
-Result = Monthly_Calander()
-print(Result)
